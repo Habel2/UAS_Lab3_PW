@@ -138,18 +138,18 @@
         $data=mysqli_query($koneksi, "select * from datafilm;");
         while ($d=mysqli_fetch_array($data)){
         ?>
-        <a href="deskripsi.php ?id=<?php echo $d['id'];?>">
             <div class="gambar" style="background:url('cover_film/<?php echo $d["foto"]?>') no-repeat; background-size:cover;">
                 <div class="centered">
+                    <a href="deskripsi.php ?id=<?php echo $d['id'];?>">
                     <h3><?php echo $d['judul']; ?></h3>
+                    </a>
                     <p><?php echo $d['genre']; ?></p>
                     <a href="edit.php ?id=<?php echo $d['id'];?>">Edit</a>
                     |
                     <a href="hapus.php ?id=<?php echo $d['id'];?>">Hapus</a>
                 </div>
             </div>
-        </a>
-        <?php } ?>               
+        <?php } ?>
         </div>
         <!-- navigasi -->
         <div class="navigasi">
